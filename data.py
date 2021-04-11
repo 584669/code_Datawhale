@@ -1,4 +1,4 @@
-import numpy
+
 import numpy as np
 import pandas as pd
 import time, math, os
@@ -204,5 +204,6 @@ def submit(recall_df, topk=5, model_name=None):
                                     3: 'article_3', 4: 'article_4', 5: 'article_5'})
 
     save_name = save_path + model_name + '_' + datetime.today().strftime('%m-%d') + '.csv'
+
     submit.to_csv(save_name, index=False, header=True)
 
